@@ -65,22 +65,39 @@ print(f"Anna has {int_a} apples and {lst_d[2]} peaches.")
 print("Anna has %d apples and %s peaches." % (int_a, "yellow"))
 
 # 11*. With variable substitutions by name (hint: by using dict)
+
+###################################################################
+
 #
 # Comprehensions:
 # (1)
-# lst = []
-# for num in range(10):
-#     if num % 2 == 1:
-#         lst.append(num ** 2)
-#     else:
-#         lst.append(num ** 4)
-# print(lst)
-#
+lst = []
+for num in range(10):
+    if num % 2 == 1:
+        lst.append(num ** 2)
+    else:
+        lst.append(num ** 4)
+print(lst)
+
 # (2)
-# list_comprehension = [num // 2 if num % 2 == 0 else num * 10 for num in range(10)]
-#
+list_comprehension = [num // 2 if num % 2 == 0 else num * 10 for num in range(10)]
+print(list_comprehension)
 # 12. Convert (1) to list comprehension
+
+list_comprehension = [num**2 if num % 2 == 1 else num ** 4 for num in range(10)]
+print(list_comprehension)
+
 # 13. Convert (2) to regular for with if-else
+lst = []
+for num in range(10):
+    if num % 2 == 0:
+        lst.append(num // 2)
+    else:
+        lst.append(num * 10)
+print(lst)
+
+
+
 #
 # (3)
 # d = {}
