@@ -38,7 +38,7 @@ print("dict_e type = dict is", isinstance(dict_e, dict))
 # String formatting:
 # Replace the placeholders with a value:
 
-print(f"Anna has 55 apples and 3 peaches.")
+# print(f"Anna has __ apples and __ peaches.")
 #
 # 5. With .format and curly braces {}
 
@@ -65,8 +65,6 @@ print(f"Anna has {int_a} apples and {lst_d[2]} peaches.")
 print("c %d apples and %s peaches." % (int_a, "yellow"))
 
 # 11*. With variable substitutions by name (hint: by using dict)
-
-# dict_1 = {'key1':'red', 'key2':'yellow'}
 
 print('Anna has {key1} apples and {key2} peaches.'.format(**{'key1': 'red', 'key2': 'yellow'}))
 
@@ -122,6 +120,7 @@ print(lst)
 # (6)
 # dict_comprehension = {x: x**3 if x**3 % 4 == 0 else x for x in range(10)}
 # print(dict_comprehension)
+
 # 14. Convert (3) to dict comprehension.
 
 dict_comprehension = {num: num ** 2 for num in range(1, 11) if num % 2 == 1}
@@ -129,7 +128,7 @@ print(dict_comprehension)
 
 # 15*. Convert (4) to dict comprehension.
 
-dict_comprehension = {num: num ** 2 if num % 2 == 1 else num // 0.5 for num in range(1, 11) }
+dict_comprehension = {num: num ** 2 if num % 2 == 1 else num // 0.5 for num in range(1, 11)}
 print(dict_comprehension)
 
 # 16. Convert (5) to regular for with if.
@@ -165,6 +164,7 @@ print(d)
 # print(foo(3, 2, 1))
 # print(foo(3, 4, 3))
 # print(foo(3, 4, 5))
+
 # 18. Convert (7) to lambda function
 
 foo = lambda x, y: x if x < y else y
@@ -182,7 +182,6 @@ def foo(x, y, z):
 
 
 print(foo(3, 2, 1))
-print(foo(3, 4, 3))
 print(foo(3, 4, 5))
 
 lst_to_sort = [5, 18, 1, 24, 33, 15, 13, 55]
