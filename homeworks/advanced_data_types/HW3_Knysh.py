@@ -62,26 +62,28 @@ print(f"Anna has {int_a} apples and {lst_d[2]} peaches.")
 
 # 10. With % operator
 
-print("Anna has %d apples and %s peaches." % (int_a, "yellow"))
+print("c %d apples and %s peaches." % (int_a, "yellow"))
 
 # 11*. With variable substitutions by name (hint: by using dict)
 
-###################################################################
+# dict_1 = {'key1':'red', 'key2':'yellow'}
 
-#
+print('Anna has {key1} apples and {key2} peaches.'.format(**{'key1': 'red', 'key2': 'yellow'}))
+
+
 # Comprehensions:
 # (1)
-lst = []
-for num in range(10):
-    if num % 2 == 1:
-        lst.append(num ** 2)
-    else:
-        lst.append(num ** 4)
-print(lst)
-
-# (2)
-list_comprehension = [num // 2 if num % 2 == 0 else num * 10 for num in range(10)]
-print(list_comprehension)
+# lst = []
+# for num in range(10):
+#     if num % 2 == 1:
+#         lst.append(num ** 2)
+#     else:
+#         lst.append(num ** 4)
+# print(lst)
+#
+# # (2)
+# list_comprehension = [num // 2 if num % 2 == 0 else num * 10 for num in range(10)]
+# print(list_comprehension)
 # 12. Convert (1) to list comprehension
 
 list_comprehension = [num**2 if num % 2 == 1 else num ** 4 for num in range(10)]
@@ -97,7 +99,6 @@ for num in range(10):
 print(lst)
 
 
-
 #
 # (3)
 # d = {}
@@ -105,7 +106,7 @@ print(lst)
 #     if num % 2 == 1:
 #         d[num] = num ** 2
 # print(d)
-#
+
 # (4)
 # d = {}
 # for num in range(1, 11):
@@ -114,17 +115,41 @@ print(lst)
 #     else:
 #         d[num] = num // 0.5
 # print(d)
-#
+
 # (5)
 # dict_comprehension = {x: x**3 for x in range(10) if x**3 % 4 == 0}
-#
+# print(dict_comprehension)
 # (6)
 # dict_comprehension = {x: x**3 if x**3 % 4 == 0 else x for x in range(10)}
-#
+# print(dict_comprehension)
 # 14. Convert (3) to dict comprehension.
+
+dict_comprehension = {num: num ** 2 for num in range(1, 11) if num % 2 == 1}
+print(dict_comprehension)
+
 # 15*. Convert (4) to dict comprehension.
+
+dict_comprehension = {num: num ** 2 if num % 2 == 1 else num // 0.5 for num in range(1, 11) }
+print(dict_comprehension)
+
 # 16. Convert (5) to regular for with if.
+
+d = {}
+for x in range(10):
+    if x ** 3 % 4 == 0:
+        d[x] = x ** 3
+print(d)
+
 # 17*. Convert (6) to regular for with if-else.
+
+d = {}
+for x in range(10):
+    if x ** 3 % 4 == 0:
+        d[x] = x ** 3
+    else:
+        d[x] = x
+print(d)
+
 #
 # Lambda:
 #
@@ -134,28 +159,79 @@ print(lst)
 #         return x
 #     else:
 #         return y
-#
-# (8)
+# #
+# # (8)
 # foo = lambda x, y, z: z if y < x and x > z else y
-#
+# print(foo(3, 2, 1))
+# print(foo(3, 4, 3))
+# print(foo(3, 4, 5))
 # 18. Convert (7) to lambda function
-# 19*. Convert (8) to regular function
-#
-# lst_to_sort = [5, 18, 1, 24, 33, 15, 13, 55]
+
+foo = lambda x, y: x if x < y else y
+
+print(foo(7, 5))
+
+# # 19*. Convert (8) to regular function
+
+
+def foo(x, y, z):
+    if y < x and x > z:
+        return z
+    else:
+        return y
+
+
+print(foo(3, 2, 1))
+print(foo(3, 4, 3))
+print(foo(3, 4, 5))
+
+lst_to_sort = [5, 18, 1, 24, 33, 15, 13, 55]
 #
 # 20. Sort lst_to_sort from min to max
+
+lst_to_sort.sort()
+print(lst_to_sort)
+
 # 21. Sort lst_to_sort from max to min
+
+lst_to_sort.sort(reverse=True)
+print(lst_to_sort)
+
 # 22. Use map and lambda to update the lst_to_sort by multiply each element by 2
+
+lst_to_sort = list(map(lambda x: x * 2, lst_to_sort))
+print(lst_to_sort)
+
 # 23*. Raise each list number to the corresponding number on another list:
-# list_A = [2, 3, 4]
-# list_B = [5, 6, 7]
+list_A = [2, 3, 4]
+list_B = [5, 6, 7]
+
+list_A = list(map(lambda x: x + 3, list_A))
+print(list_A)
+
 # 24. Use reduce and lambda to compute the numbers of a lst_to_sort.
+
+import functools
+
+lst_to_sort = [5, 18, 1, 24, 33, 15, 13, 55]
+print(functools.reduce(lambda a, b: a+b, lst_to_sort))
+
 # 25. Use filter and lambda to filter the number of a lst_to_sort with elem % 2 == 1.
+
+new_list = list(filter(lambda x: (x % 2 == 1), lst_to_sort))
+print(new_list)
+
+
 # 26. Considering the range of values: b = range(-10, 10), use the function filter to return only negative numbers.
+
+b = range(-10, 10)
+new_list = list(filter(lambda x: (x < 0), b))
+print(new_list)
+
 # 27*. Using the filter function, find the values that are common to the two lists:
-# list_1 = [1,2,3,5,7,9]
-# list_2 = [2,3,5,6,7,8]
-#
-#
-#
-#
+
+list_1 = [1, 2, 3, 5, 7, 9]
+list_2 = [2, 3, 5, 6, 7, 8]
+
+new_list = list(filter(lambda x: x in list_1, list_2))
+print(new_list)
