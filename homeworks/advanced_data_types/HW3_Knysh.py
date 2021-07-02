@@ -62,12 +62,12 @@ print(f"Anna has {int_a} apples and {lst_d[2]} peaches.")
 
 # 10. With % operator
 
-print("c %d apples and %s peaches." % (int_a, "yellow"))
+print("Anna has %d apples and %s peaches." % (int_a, "yellow"))
 
 # 11*. With variable substitutions by name (hint: by using dict)
 
 print('Anna has {key1} apples and {key2} peaches.'.format(**{'key1': 'red', 'key2': 'yellow'}))
-
+print('Anna has %(key1)s apples and %(key2)s peaches.' % {'key1': 'red', 'key2': 'yellow'})
 
 # Comprehensions:
 # (1)
@@ -205,8 +205,9 @@ print(lst_to_sort)
 list_A = [2, 3, 4]
 list_B = [5, 6, 7]
 
-list_A = list(map(lambda x: x + 3, list_A))
-print(list_A)
+list_C = [x ** n for x in list_A for n in list_B]
+print(list_C)
+
 
 # 24. Use reduce and lambda to compute the numbers of a lst_to_sort.
 
@@ -234,3 +235,5 @@ list_2 = [2, 3, 5, 6, 7, 8]
 
 new_list = list(filter(lambda x: x in list_1, list_2))
 print(new_list)
+
+
