@@ -205,9 +205,8 @@ print(lst_to_sort)
 list_A = [2, 3, 4]
 list_B = [5, 6, 7]
 
-list_C = [x ** n for x in list_A for n in list_B]
+list_C = list(map(lambda x, y: x ** y, list_A, list_B))
 print(list_C)
-
 
 # 24. Use reduce and lambda to compute the numbers of a lst_to_sort.
 
@@ -230,10 +229,11 @@ print(new_list)
 
 # 27*. Using the filter function, find the values that are common to the two lists:
 
-list_1 = [1, 2, 3, 5, 7, 9]
-list_2 = [2, 3, 5, 6, 7, 8]
+list_1 = [1, 10, 6, 5, 10, 9]
+list_2 = [2, 10, 5, 6, 7, 8]
 
 new_list = list(filter(lambda x: x in list_1, list_2))
 print(new_list)
 
-
+list_3 = list(filter(lambda x: (x == x in list_1), list_2))
+print(list_3)
