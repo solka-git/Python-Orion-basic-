@@ -234,6 +234,3 @@ list_2 = [2, 10, 5, 6, 7, 8]
 
 new_list = list(filter(lambda x: x in list_1, list_2))
 print(new_list)
-
-list_3 = list(filter(lambda x: (x == x in list_1), list_2))
-print(list_3)
