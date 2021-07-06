@@ -137,6 +137,7 @@ class City:
     def __str__(self):
         return f"The population of the city {self.name} is {self.population}"
 
+
 City1 = City('Kovel', 10560)
 print(City1)
 
@@ -175,12 +176,12 @@ class CallSumm:
 
 call1 = CallSumm()
 print("Result = ", call1(12, 13))
-
 #Result =  25
 
 # 12*. Making Your Objects Truthy or Falsey Using __bool__().
 # Create class MyOrder with cart and customer instance attributes.
 # Override the __bool__magic method considered to be truthy if the length of the cart list is non-zero.
+
 # e.g.:
 # order_1 = MyOrder(['a', 'b', 'c'], 'd')
 # order_2 = MyOrder([], 'a')
