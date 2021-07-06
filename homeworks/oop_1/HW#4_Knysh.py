@@ -48,12 +48,14 @@ class SchoolBus(School, Bus):
     pass
 
     def bus_school_color(self):
-        print('bus_school_color method', self.get_school_id)
+        print('bus_school_color method')
 
 Sch_bus = SchoolBus(12, 400)
 Sch_bus.seating_capacity()
 Sch_bus.bus_school_color()
 
+# seating_capacity method
+# bus_school_color method
 
 # 7. Polymorphism: Create two classes: Bear, Wolf. Both of them should have make_sound method.
 
@@ -122,7 +124,6 @@ A_ins = City('Kovel', 600)
 
 # 9. Override a printable string representation of the City class and return:
 # The population of the city {name} is {population}
-print('gggggggggggg')
 
 class City:
     def __new__(cls, name, population):
