@@ -45,8 +45,6 @@ class School:
 # and will have its own - bus_school_color
 
 class SchoolBus(School, Bus):
-    pass
-
     def bus_school_color(self):
         print('bus_school_color method')
 
@@ -65,7 +63,7 @@ class Bear:
 
     def make_sound(self, sound=''):
         print(f"{self.name} sound is ")
-        if sound == '':
+        if not sound:
             print('Roaar')
         else:
             print(sound)
@@ -77,7 +75,7 @@ class Wolf:
 
     def make_sound(self, sound=''):
         print(f"{self.name} sound is ")
-        if sound == '':
+        if not sound:
             print('Owooo')
         else:
             print(sound)
@@ -153,14 +151,13 @@ class Add:
 
     def __add__(self, other):
        if self.number > 10 or other.number > 10:
-            return self.number * other.number
-       else:
-            return self.number + other.number
+            self.number *= other.number
+       return self.number + other.number
 
 a = Add(45)
 b = Add(2)
 print(f"result = {a+b}")
-#result = 90
+#result = 92
 a = Add(5)
 b = Add(2)
 print(f"result = {a+b}")
