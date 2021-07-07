@@ -10,7 +10,7 @@ class Person:
 
 class Student(Person):
     def __init__(self, subject, name, surname, age):
-        super().__init__(name, surname, age)
+        Person.__init__(self, name, surname, age)
         self.subject = subject
 
     def learn(self):
