@@ -16,14 +16,15 @@ class GardenMeta(type):
 
 
 class Garden(metaclass=GardenMeta):
-    def __init__(self, vegetables, fruits):
+    def __init__(self, vegetables, fruits, pests=0):
         self.vegetables = vegetables
         self.fruits = fruits
+        self.pests = pests
 
     def show_the_garden(self):
         print(f'I have such vegetables {self.vegetables}')
         print(f'I have such fruits {self.fruits}')
-
+        print(f'I have such pests {self.pests}')
 
 class Vegetables:
     def __init__(self, vegetable_type):
@@ -146,15 +147,24 @@ class Gardener:
             else:
                 print('Too early to harvest')
 
+class Pests:
+    
+    def __init__(self, pests_type, number_of_pests):
+        self.pests_type = pests_type
+        self.number_of_pests = number_of_pests
 
-tomato1 = TomatoBush(4)
-apple_tree1 = AppleTree(10)
+    def eat_plant(self, plant):
+        plant.pop()
 
+
+tomato1 = TomatoBush(2)
+apple_tree1 = AppleTree(2)
 John = Gardener('John', [tomato1, apple_tree1])
-
 garden1 = Garden(tomato1, apple_tree1)
+garden1.show_the_garden()
 
-John.work()
+print(tomato1.tomatoes)
+print(apple_tree1.apples)
 John.work()
 John.work()
 John.work()
