@@ -226,4 +226,45 @@ Garden1.show_the_garden()
 John.work()
 John.harvest()
 Garden1.show_the_garden()
-
+#
+# Garden:
+# Vegetables: tomato bush, 3 tomatoes
+# Fruits: apple tree, 4 apples
+# Gardener: John
+# Pests: apple_pests, 2
+#
+# Cherry, 0 , 1
+# Cherry, 1 , 1
+# Cherry, 2 , 1
+# White, 0 , 1
+# White, 1 , 1
+# White, 2 , 1
+# White, 3 , 1
+# Cherry, 0 , 2
+# Cherry, 1 , 2
+# Cherry, 2 , 2
+# White, 0 , 2
+# White, 1 , 2
+# White, 2 , 2
+# White, 3 , 2
+# Pest had eaten plant
+#
+# Pest had eaten plant
+#
+# There are no pests in the garden
+# Garden:
+# Vegetables: tomato bush, 3 tomatoes
+# Fruits: apple tree, 2 apples
+# Gardener: John
+# Pests: 0
+# Cherry, 0 , 3
+# Cherry, 1 , 3
+# Cherry, 2 , 3
+# White, 0 , 3
+# White, 1 , 3
+# Garden:
+# Vegetables: tomato bush, 0 tomatoes
+# Fruits: apple tree, 0 apples
+# Gardener: John
+# Pests: 0
+#
