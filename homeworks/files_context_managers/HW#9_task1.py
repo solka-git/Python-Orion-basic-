@@ -36,7 +36,6 @@ def make_file(file_name):
     new_file = open('new_file.txt', 'w')
     while True:
         flag = file.readline()
-
         if flag == '':
             break
         text.append(file.readline().strip('\n'))
@@ -47,7 +46,6 @@ def make_file(file_name):
 
 
 print("*** Task 1.1 ***\n", make_dict("task1.txt"))
-
 
 file = open(make_file('task1.txt'))
 print("\n*** Task 1.2 ***\n", file.read())
