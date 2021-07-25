@@ -18,6 +18,7 @@ class OpenExel:
     def __enter__(self):
         return self
 
+
     def __str__(self):
         for i in range(1, self.rows + 1):
             string = ''
@@ -25,12 +26,11 @@ class OpenExel:
                 cell = self.sheet.cell(row=i, column=j)
                 string = string + str(cell.value) + ' '
             print(string)
-        print(self.sheet)
         return f''
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         if exc_type is None:
-            self.file.close()
+            self.file.save()
         elif exc_type is Exception:
             print('Exception')
             return True
