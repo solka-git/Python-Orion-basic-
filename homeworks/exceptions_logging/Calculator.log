@@ -1,0 +1,6 @@
+ERROR: HW#10_task1.py: 2021-07-26 18:12:30,221 - Invalid input
+INFO: HW#10_task1.py: 2021-07-26 18:12:42,855 - func divide()
+ERROR: HW#10_task1.py: 2021-07-26 18:12:42,856 - ZeroDivisionError
+INFO: HW#10_task1.py: 2021-07-26 18:12:55,569 - func pow_()
+INFO: HW#10_task1.py: 2021-07-26 18:13:17,437 - func root()
+INFO: HW#10_task1.py: 2021-07-26 18:13:34,998 - func exit()
