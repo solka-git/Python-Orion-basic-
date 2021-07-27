@@ -32,17 +32,17 @@ class MyClass_2:
     def total_objects(cls):
         print(f'Total objects: {cls.TOTAL_OBJECTS}')
 
-obj_1 = MyClass_2()
-obj_2 = MyClass_2()
-obj_3 = MyClass_2()
-
-MyClass_2.total_objects()
-
-my_class = MyClass('test')
-my_class.method()
-
-MyClass.test()
-MyClass.foo()
+# obj_1 = MyClass_2()
+# obj_2 = MyClass_2()
+# obj_3 = MyClass_2()
+#
+# MyClass_2.total_objects()
+#
+# my_class = MyClass('test')
+# my_class.method()
+#
+# MyClass.test()
+# MyClass.foo()
 
 class Pizza:
     def __init__(self, ingredients):

@@ -60,6 +60,14 @@ def input_calc(msg):
     return num
 
 
+class NegativeDegreeError(Exception):
+    pass
+
+
+class NegativeNumberError(Exception):
+    pass
+
+
 print("*** КАЛЬКУЛЯТОР ****")
 print("1.Додавання")
 print("2.Віднімання")
@@ -69,6 +77,7 @@ print("5.Піднесення до степеня(число, степінь")
 print("6.Взяття з під кореня(число, основа кореня)")
 print("7.Пошук відсотку від числа(число, відсоток)")
 print("8.Вихід з програми")
+
 
 while True:
     # Take input from the user
@@ -97,7 +106,6 @@ while True:
             try:
                 num1 = input_calc("Введіть перше число >> ")
                 num2 = input_calc("Введіть друге число >> ")
-                logging.info("func divide()")
                 print(divide(num1, num2))
 
             except ZeroDivisionError:
@@ -114,12 +122,22 @@ while True:
             try:
                 num1 = input_calc("Введіть перше число >> ")
                 num2 = input_calc("Введіть основу кореня >> ")
+                if num1 < 0:
+                    raise NegativeNumberError
+                if num2 < 0:
+                    raise NegativeDegreeError
                 logging.info("func root()")
                 print(root(num1, num2))
 
             except ZeroDivisionError:
                 print("Помилка. Ділення на нуль.")
                 logging.error("ZeroDivisionError")
+            except NegativeDegreeError:
+                print("Степінь повинна бути > 0")
+                logging.error("NegativeDegreeError")
+            except NegativeNumberError:
+                print("Число має бути > 0")
+                logging.error("NegativeNumberError")
 
         elif choice == '7':
             num1 = input_calc("Введіть перше число >> ")
@@ -143,18 +161,20 @@ while True:
 # 6.Взяття з під кореня(число, основа кореня)
 # 7.Пошук відсотку від числа(число, відсоток)
 # 8.Вихід з програми
-# Введіть номер операції >> hh
+# Введіть номер операції >> ро
 # Неправильний ввід. Такої операції не існує.
+# Введіть номер операції >> 6
+# Введіть перше число >> 9
+# Введіть основу кореня >> -3
+# Степінь повинна бути > 0
+# Введіть номер операції >> 6
+# Введіть перше число >> 9
+# Введіть основу кореня >> 2
+# Корінь за основою 2.0 числа 9.0 = 3.0
 # Введіть номер операції >> 4
-# Введіть перше число >> 0
+# Введіть перше число >> 5
 # Введіть друге число >> 0
 # Помилка. Ділення на нуль.
-# Введіть номер операції >> 5
-# Введіть перше число >> -56
-# Введіть степінь >> -5
-# -56.0 ** -5.0 = -0.0
-# Введіть номер операції >> 7
-# Введіть перше число >> 78.12345
-# Введіть відсоток >> 99
-# 99.0 percent of 78.12345 = 77.342
 # Введіть номер операції >> 8
+#
+# Process finished with exit code 0

@@ -4,3 +4,20 @@ ERROR: HW#10_task1.py: 2021-07-26 18:12:42,856 - ZeroDivisionError
 INFO: HW#10_task1.py: 2021-07-26 18:12:55,569 - func pow_()
 INFO: HW#10_task1.py: 2021-07-26 18:13:17,437 - func root()
 INFO: HW#10_task1.py: 2021-07-26 18:13:34,998 - func exit()
+INFO: HW#10_task1.py: 2021-07-27 15:51:29,544 - func root()
+INFO: HW#10_task1.py: 2021-07-27 15:52:05,051 - func root()
+INFO: HW#10_task1.py: 2021-07-27 15:52:17,018 - func root()
+INFO: HW#10_task1.py: 2021-07-27 15:55:22,898 - func root()
+INFO: HW#10_task1.py: 2021-07-27 15:55:54,761 - func root()
+INFO: HW#10_task1.py: 2021-07-27 15:56:02,836 - func root()
+INFO: HW#10_task1.py: 2021-07-27 16:24:46,464 - func root()
+ERROR: HW#10_task1.py: 2021-07-27 16:27:32,738 - NegativeDegreeError
+ERROR: HW#10_task1.py: 2021-07-27 16:27:37,724 - Invalid input
+INFO: HW#10_task1.py: 2021-07-27 16:27:43,406 - func root()
+ERROR: HW#10_task1.py: 2021-07-27 16:27:43,407 - ZeroDivisionError
+INFO: HW#10_task1.py: 2021-07-27 16:28:58,326 - func root()
+ERROR: HW#10_task1.py: 2021-07-27 16:33:06,296 - Invalid input
+ERROR: HW#10_task1.py: 2021-07-27 16:33:16,887 - NegativeDegreeError
+INFO: HW#10_task1.py: 2021-07-27 16:33:23,948 - func root()
+ERROR: HW#10_task1.py: 2021-07-27 16:33:47,987 - ZeroDivisionError
+INFO: HW#10_task1.py: 2021-07-27 16:33:52,747 - func exit()

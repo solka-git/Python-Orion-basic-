@@ -77,18 +77,20 @@ class Forest:
         self.animals.pop(animal.id)
 
     def any_predators(self):
-        flag = False
-        for key in self.animals:
-            if isinstance(self.animals[key], Predator):
-                flag = True
-        return flag
+        return all(isinstance(self.animals[key], Herbivorous) for key in self.animals)
+        # flag = False
+        # for key in self.animals:
+        #     if isinstance(self.animals[key], Predator):
+        #         flag = True
+        # return flag
 
     def only_predators(self):
-        flag = False
-        for key in self.animals:
-            if isinstance(self.animals[key], Herbivorous):
-                flag = True
-        return flag
+        return any(isinstance(self.animals[key], Herbivorous) for key in self.animals)
+        # flag = False
+        # for key in self.animals:
+        #     if isinstance(self.animals[key], Herbivorous):
+        #         flag = True
+        # return flag
 
 
 
@@ -122,7 +124,7 @@ if __name__ == "__main__":
     level = 1
     while True:
         print(f'\n*** LEVEL {level} ***')
-        if not forest.any_predators():
+        if forest.any_predators():
             print("*** *** Game over! *** *** \n*** There are no predators in the forest ***")
             break
         if not forest.only_predators():

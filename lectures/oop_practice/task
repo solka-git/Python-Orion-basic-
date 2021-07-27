@@ -6,6 +6,15 @@ maturity (stages: None, Flowering, Green, Red).
 Pests can eat only green and red fruit or vegetable.
 Once pests eat the fruit, it should be removed.
 
+# ** Сад **
+У нас лише один сад. У саду можна мати
+овочі, фрукти та шкідники.
+Кожен фрукт або овоч повинен мати стадію
+зрілість (стадії: відсутні, цвітіння, зелений, червоний).
+Шкідники можуть їсти лише зелені та червоні фрукти чи овочі.
+Як тільки шкідники з’їдять плоди, їх слід видалити.
+
+
 ## There is a Tomato with the following
 characteristics:
 1. Number of tomatoes (Index)
@@ -14,6 +23,15 @@ characteristics:
 ### A tomato can:
 1. Grow (move to the next stage of maturation)
 2. Provide information about your maturity
+
+## Є помідор із наступним
+характеристики:
+1. Кількість помідорів (індекс)
+2. Овочевий тип
+
+### vtnjlb:
+1. Рости (переходити до наступного етапу дозрівання)
+2. Надайте інформацію про свою зрілість
 
 ### There is a Tomato Bush that:
 1. Contains a list of tomatoes that grow on it
