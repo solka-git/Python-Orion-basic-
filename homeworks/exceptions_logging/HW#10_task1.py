@@ -178,3 +178,4 @@ while True:
 # Введіть номер операції >> 8
 #
 # Process finished with exit code 0
+
