@@ -121,14 +121,13 @@ while True:
         elif choice == '6':
             try:
                 num1 = input_calc("Введіть перше число >> ")
-                num2 = input_calc("Введіть основу кореня >> ")
                 if num1 < 0:
                     raise NegativeNumberError
+                num2 = input_calc("Введіть основу кореня >> ")
                 if num2 < 0:
                     raise NegativeDegreeError
                 logging.info("func root()")
                 print(root(num1, num2))
-
             except ZeroDivisionError:
                 print("Помилка. Ділення на нуль.")
                 logging.error("ZeroDivisionError")

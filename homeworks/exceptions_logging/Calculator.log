@@ -23,3 +23,6 @@ ERROR: HW#10_task1.py: 2021-07-27 16:33:47,987 - ZeroDivisionError
 INFO: HW#10_task1.py: 2021-07-27 16:33:52,747 - func exit()
 ERROR: HW#10_task1.py: 2021-07-27 17:45:46,123 - Invalid input
 INFO: HW#10_task1.py: 2021-07-27 17:45:47,139 - func exit()
+ERROR: HW#10_task1.py: 2021-07-29 22:48:35,477 - NegativeNumberError
+ERROR: HW#10_task1.py: 2021-07-29 22:49:18,244 - NegativeNumberError
+ERROR: HW#10_task1.py: 2021-07-29 22:50:11,893 - NegativeNumberError
