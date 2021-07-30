@@ -46,8 +46,6 @@ class VacuumCleaner:
     config = configparser.ConfigParser()  # создаём объекта парсера
     config.read("configfile.ini")  # читаем конфиг
 
-    print(config["VacuumCleaner"]["water"])
-
     def __init__(self, battery,  garbage, water):
         self.battery = battery
         self.garbage = garbage
