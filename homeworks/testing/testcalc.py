@@ -8,6 +8,7 @@ class Calc:
     @staticmethod
     def sum(a, b):
         """
+
         >>> Calc.sum(3, 5)
         8
         >>> Calc.sum(3.9, 7.1)

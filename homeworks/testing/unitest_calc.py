@@ -66,6 +66,7 @@ class TestDiv(TestCase):
         self.assertEqual(Calc.div(1, 2), 0.5)
         self.assertEqual(Calc.div(-2, 2), -1)
 
+
 class TestPercent(TestCase):
 
     def test_401(self):
