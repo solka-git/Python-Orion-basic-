@@ -56,6 +56,22 @@ def hypotenuse(cathetus_1, cathetus_2):
 # (наприклад “1”) то строка приводиться до чисельного типу даних
 #
 
+# def counte(el, new_list):
+#     for item in list_:
+#         for el in item:
+#         if isinstance(el, (int, float)):
+#             new_list.append(el)
+#         else:
+#             try:
+#                 elm = float(el)
+#                 new_list.append(elm)
+#             except (ValueError, TypeError):
+#                 continue
+
+
+
+
+
 def filter_(func):
     def wrap(list_):
         new_list = []
@@ -66,7 +82,7 @@ def filter_(func):
                 try:
                     elm = float(el)
                     new_list.append(elm)
-                except ValueError:
+                except (ValueError, TypeError):
                     continue
         return func(new_list)
     return wrap
@@ -77,7 +93,7 @@ def sum_(list_):
     return sum(list_)
 
 
-# print(sum_([1, 2, 3, 'k', '4', '5.5', 4.5]))
+print(sum_([1, 2, 3, 'k', '4', '5.5', 4.5, [5], {'9': 8}]))
 
 # 4. Написати функцію яка приймає на вхід ціле число n створює і повертає список цілих чисел від 0 до n.
 # Написати до цієї функції декоратор який всі елементи отриманого списку переведе в строковий тип даних
@@ -94,4 +110,4 @@ def func_list(n):
     return [x for x in range(n+1)]
 
 
-print(func_list(5))
+# print(func_list(5))
