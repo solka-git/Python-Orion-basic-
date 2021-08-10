@@ -85,11 +85,7 @@ def sum_(list_):
 
 def decor_str(func):
     def wrap(n):
-        list_ = func(n)
-        new_list = []
-        for el in list_:
-            new_list.append(str(el))
-        return new_list
+        return [str(el) for el in func(n)]
     return wrap
 
 
