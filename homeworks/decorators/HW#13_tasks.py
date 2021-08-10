@@ -56,22 +56,6 @@ def hypotenuse(cathetus_1, cathetus_2):
 # (наприклад “1”) то строка приводиться до чисельного типу даних
 #
 
-# def counte(el, new_list):
-#     for item in list_:
-#         for el in item:
-#         if isinstance(el, (int, float)):
-#             new_list.append(el)
-#         else:
-#             try:
-#                 elm = float(el)
-#                 new_list.append(elm)
-#             except (ValueError, TypeError):
-#                 continue
-
-
-
-
-
 def filter_(func):
     def wrap(list_):
         new_list = []
