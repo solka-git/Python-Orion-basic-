@@ -26,3 +26,18 @@ INFO: HW#10_task1.py: 2021-07-27 17:45:47,139 - func exit()
 ERROR: HW#10_task1.py: 2021-07-29 22:48:35,477 - NegativeNumberError
 ERROR: HW#10_task1.py: 2021-07-29 22:49:18,244 - NegativeNumberError
 ERROR: HW#10_task1.py: 2021-07-29 22:50:11,893 - NegativeNumberError
+INFO: HW#10_task1.py: 2021-08-02 17:46:23,899 - func add()
+INFO: HW#10_task1.py: 2021-08-02 17:46:31,427 - func substract()
+ERROR: HW#10_task1.py: 2021-08-02 17:46:34,169 - Invalid input
+INFO: HW#10_task1.py: 2021-08-02 17:46:43,923 - func multiply()
+ERROR: HW#10_task1.py: 2021-08-02 17:46:46,955 - Invalid input
+ERROR: HW#10_task1.py: 2021-08-02 17:46:52,566 - ZeroDivisionError
+INFO: HW#10_task1.py: 2021-08-02 17:46:59,799 - func pow_()
+ERROR: HW#10_task1.py: 2021-08-02 17:47:41,415 - NegativeNumberError
+INFO: HW#10_task1.py: 2021-08-02 17:47:47,547 - func root()
+ERROR: HW#10_task1.py: 2021-08-02 17:47:47,548 - ZeroDivisionError
+INFO: HW#10_task1.py: 2021-08-02 17:47:54,606 - func root()
+INFO: HW#10_task1.py: 2021-08-02 17:48:49,096 - func root()
+ERROR: HW#10_task1.py: 2021-08-02 17:48:53,328 - Invalid input
+INFO: HW#10_task1.py: 2021-08-02 17:49:10,337 - func root()
+INFO: HW#10_task1.py: 2021-08-02 17:49:15,151 - func exit()
