@@ -83,29 +83,23 @@ while True:
     # Take input from the user
     choice = input("Введіть номер операції >> ")
     # Check if choice is one of the four options
-    if choice in ('1', '2', '3', '4', '5', '6', '7', '8'):
+    if choice in ('1', '2', '3', '4', '5', '7'):
+        num1 = input_calc("Введіть перше число >> ")
+        num2 = input_calc("Введіть друге число >> ")
         if choice == '1':
-            num1 = input_calc("Введіть перше число >> ")
-            num2 = input_calc("Введіть друге число >> ")
             logging.info("func add()")
             print(add(num1, num2))
 
         elif choice == '2':
-            num1 = input_calc("Введіть перше число >> ")
-            num2 = input_calc("Введіть друге число >> ")
             logging.info("func substract()")
             print(subtract(num1, num2))
 
         elif choice == '3':
-            num1 = input_calc("Введіть перше число >> ")
-            num2 = input_calc("Введіть друге число >> ")
             logging.info("func multiply()")
             print(multiply(num1, num2))
 
         elif choice == '4':
             try:
-                num1 = input_calc("Введіть перше число >> ")
-                num2 = input_calc("Введіть друге число >> ")
                 print(divide(num1, num2))
 
             except ZeroDivisionError:
@@ -113,40 +107,52 @@ while True:
                 logging.error("ZeroDivisionError")
 
         elif choice == '5':
-            num1 = input_calc("Введіть перше число >> ")
-            num2 = input_calc("Введіть степінь >> ")
             logging.info("func pow_()")
             print(pow_(num1, num2))
 
-        elif choice == '6':
-            try:
-                num1 = input_calc("Введіть перше число >> ")
-                if num1 < 0:
-                    raise NegativeNumberError
-                num2 = input_calc("Введіть основу кореня >> ")
-                if num2 < 0:
-                    raise NegativeDegreeError
-                logging.info("func root()")
-                print(root(num1, num2))
-            except ZeroDivisionError:
-                print("Помилка. Ділення на нуль.")
-                logging.error("ZeroDivisionError")
-            except NegativeDegreeError:
-                print("Степінь повинна бути > 0")
-                logging.error("NegativeDegreeError")
-            except NegativeNumberError:
-                print("Число має бути > 0")
-                logging.error("NegativeNumberError")
-
         elif choice == '7':
-            num1 = input_calc("Введіть перше число >> ")
-            num2 = input_calc("Введіть відсоток >> ")
             logging.info("func root()")
             print(percent(num1, num2))
 
-        elif choice == '8':
-            logging.info("func exit()")
-            break
+    elif choice == '6':
+
+        try:
+
+            num1 = input_calc("Введіть перше число >> ")
+
+            if num1 < 0:
+                raise NegativeNumberError
+
+            num2 = input_calc("Введіть основу кореня >> ")
+
+            if num2 < 0:
+                raise NegativeDegreeError
+
+            logging.info("func root()")
+
+            print(root(num1, num2))
+
+        except ZeroDivisionError:
+
+            print("Помилка. Ділення на нуль.")
+
+            logging.error("ZeroDivisionError")
+
+        except NegativeDegreeError:
+
+            print("Степінь повинна бути > 0")
+
+            logging.error("NegativeDegreeError")
+
+        except NegativeNumberError:
+
+            print("Число має бути > 0")
+
+            logging.error("NegativeNumberError")
+
+    elif choice == '8':
+        logging.info("func exit()")
+        break
     else:
         print("Неправильний ввід. Такої операції не існує.")
         logging.error("Invalid input")

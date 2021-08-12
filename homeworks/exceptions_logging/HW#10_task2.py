@@ -106,6 +106,15 @@ class VacuumCleaner:
 philips_robot = VacuumCleaner(25, 10, 10)
 philips_robot.move()
 
+# REFACTOR
+# while loop outside
+# while True:
+#     try:
+#         robot.move()
+#     except BatteryDischarged:
+#         print('No battery, off')
+#     break
+
 # $$$ Start Working $$$
 #
 # --- 1 Move ---
