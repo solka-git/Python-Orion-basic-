@@ -58,18 +58,26 @@ def hypotenuse(cathetus_1, cathetus_2):
 
 def filter_(func):
     def wrap(list_):
+        # new_list = []
+        # for el in list_:
+        #     if isinstance(el, (int, float)):
+        #         new_list.append(el)
+        #     else:
+        #         try:
+        #             elm = float(el)
+        #             new_list.append(elm)
+        #         except (ValueError, TypeError):
+        #             continue
+        # return func(new_list)
         new_list = []
         for el in list_:
-            if isinstance(el, (int, float)):
-                new_list.append(el)
-            else:
-                try:
-                    elm = float(el)
-                    new_list.append(elm)
-                except (ValueError, TypeError):
-                    continue
+            try:
+                new_list.append(float(el)) if type(el) != int else new_list.append(el)
+            except (ValueError, TypeError):
+                continue
         return func(new_list)
     return wrap
+
 
 
 @filter_
