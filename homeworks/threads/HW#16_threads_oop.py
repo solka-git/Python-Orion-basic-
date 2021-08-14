@@ -52,7 +52,7 @@ class MyThread(Thread):
 format_ = "%(asctime)s: %(message)s"
 logging.basicConfig(format=format_, level=logging.INFO, datefmt="%H:%M:%S")
 
-thread_1 = MyThread("Thread 1", a='zero', b=5, c=3)
+thread_1 = MyThread("Thread 1", a=2, b=5, c=3)
 thread_2 = MyThread("Thread 2", a=1, b=4, c=3)
 logging.info("Threads starting")
 thread_1.start()
